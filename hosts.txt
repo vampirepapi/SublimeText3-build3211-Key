@@ -1,0 +1,6 @@
+0.0.0.0 sublimetext.com
+0.0.0.0 license.sublimehq.com
+0.0.0.0 45.55.255.55 #sublimetext
+0.0.0.0 45.55.41.223 #sublimetext
+127.0.0.1 license.sublimehq.com # SublimeText
+127.0.0.1 www.sublimetext.com # SublimeText

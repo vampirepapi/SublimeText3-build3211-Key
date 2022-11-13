@@ -52,3 +52,15 @@ printf '\x48\x31\xC0\x48\xFF\xC0\xC3'     | dd of=sublime_text bs=1 seek=$((0x00
 printf '\xC3'                             | dd of=sublime_text bs=1 seek=$((0x00385156)) conv=notrunc
 printf '\xC3'                             | dd of=sublime_text bs=1 seek=$((0x0036EF50)) conv=notrunc
 ```
+
+```
+# for Linux [v4143]
+cd /opt/sublime_text || exit
+md5sum -c <<<"AFDEBB91F2BF42C9B491BAFD517C0A49  sublime_text" || exit
+echo 003A31F2: 48 31 C0 C3          | xxd -r - sublime_text
+echo 00399387: 90 90 90 90 90       | xxd -r - sublime_text
+echo 0039939D: 90 90 90 90 90       | xxd -r - sublime_text
+echo 003A4E30: 48 31 C0 48 FF C0 C3 | xxd -r - sublime_text
+echo 003A2E82: C3                   | xxd -r - sublime_text
+echo 0038C9F0: C3                   | xxd -r - sublime_text
+```
